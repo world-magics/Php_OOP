@@ -1,6 +1,6 @@
 <?php
 
-    class Car{
+   abstract class Car{
         public $model;
         protected $year;
         private $km;
@@ -38,40 +38,51 @@
         private function sell(){
             return 'selling';
         }
-
-
-
+        //metod abstrak busa tanasi bumidi
+                // public yoiki protected busa voris olayotgan metod ham shun tipda bulshi kk dgani
+        abstract public function stop();
+    }
+//abstrac klas ichidagi abtrsak metod bulsa bola clasdayam aynan shu metod bulishi kk
+//ichida btta abstrac metodi buldmi clasniyam abstrac qlb quysh kk
+    class ElectricCar extends Car{
+        public function stop(){
+            return 'stop';
+        }
 
     }
-
-    $cherry=new Car('chevrolet',2019,180000);
-    echo $cherry->getKm('125000');
-
-    echo('</br>');
+    $lucid=new ElectricCar('lucid','2022',10);
+    
+    var_dump($lucid);
 
 
-    echo $cherry->getYear('2020');
+//     $cherry=new Car('chevrolet',2019,180000);
+//     echo $cherry->getKm('125000');
+
+//     echo('</br>');
+
+
+//     echo $cherry->getYear('2020');
 
 
 
-class ElectricCar extends Car{
-    public $km;
-    public function getYear(){
-        return $this->year;
-    }
-    public function getKm(){
-        return $this->km;
-    }
-    public function getReverse(){
-        return $this->reverse();
-    }
-}
+// class ElectricCar extends Car{
+//     public $km;
+//     public function getYear(){
+//         return $this->year;
+//     }
+//     public function getKm(){
+//         return $this->km;
+//     }
+//     public function getReverse(){
+//         return $this->reverse();
+//     }
+// }
 
-$tesla=new ElectricCar('tesla','2020','2644684');
+// $tesla=new ElectricCar('tesla','2020','2644684');
 
-echo '</br>'.$tesla->getReverse();
+// echo '</br>'.$tesla->getReverse();
 
-echo '</br>'.$tesla->getYear();
+// echo '</br>'.$tesla->getYear();
 
 
     // class ElectricCar extends Car{
