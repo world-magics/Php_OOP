@@ -8,7 +8,7 @@
 
         public function bark(){
             $this->run();
-            $this->eat();
+            self::eat();
             return 'dog sounds';
         }
         public static function eat(){
@@ -16,6 +16,12 @@
         }
         public function run(){
             echo 'running';
+        }
+    }
+    class BullDog extends Dog {
+        public function __construct()
+        {
+            parent::eat();
         }
     }
 
