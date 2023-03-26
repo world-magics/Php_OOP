@@ -1,24 +1,15 @@
 <?php
+    use App\Kitchen\Table;
+    use App\Html\Table as Htable; //as bu Table ni Htable qb ishlatsh dgani
+
+    require 'classes/Dog.php';
+    require 'classes/Fruit.php';
+    require 'Html/Table.php';
+    require 'Kitchen/Table.php';
+    // $table=new App\Kitchen\Table();
+    $table=new Table();
 
 
-    class Dog{
-        public $name;
-        public static $weight='25 kg';
+    var_dump($table);
 
-        //constants
-        const BREED="Doberman";
-
-
-        public function bark(){
-
-            return self::BREED;
-        }
-        public static function eat(){
-            echo 'eating';
-        }
-        public function run(){
-            echo 'running';
-        }
-    }
- echo Dog::BREED; 
 ?>
