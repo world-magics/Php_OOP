@@ -16,7 +16,7 @@
     $cat2= clone $cat; //do will clone
     $cat->name='Kaya';
 
-
-    var_dump($cat->name);
+    echo $cat;
+    // var_dump($cat->name);
 
 ?>
