@@ -5,18 +5,16 @@
     require 'classes/Dog.php';
     require 'classes/Fruit.php';
     require 'classes/Cat.php';
+    require 'classes/Car.php';
     require 'Html/Table.php';
     require 'Kitchen/Table.php';
-    // $table=new App\Kitchen\Table();
-    $table=new Table();
+   
 
-    $cat=new Cat();
-    $cat->name='Kisa';
-    // var_dump($cat->name);
-    $cat2= clone $cat; //do will clone
-    $cat->name='Kaya';
+    $audi=new Car();
+    $audi->setModel("Audi");
+    $audi->setYear("20.12.2023");
 
-    echo $cat;
-    // var_dump($cat->name);
+    echo "</br>".$audi->getModel();
+    echo "</br>".$audi->getYear();
 
 ?>
